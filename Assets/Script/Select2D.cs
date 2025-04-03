@@ -5,17 +5,20 @@ using UnityEngine;
 public class Select2D : MonoBehaviour
 {
     private GameObject selectedObject = null; // 選択されたオブジェクト
-    public Transform limitA; // 制限の左側オブジェクト
-    public Transform limitB; // 制限の右側オブジェクト
+    [SerializeField] Transform limitA; // 制限の左側オブジェクト
+    [SerializeField] Transform limitB; // 制限の右側オブジェクト
     private float minX;
     private float maxX;
     private float objectCenter;
+
+    public bool isSelect { get; set; }
 
     void Start()
     {
         // limitA と limitB の X 座標をもとに範囲を保存
         minX = Mathf.Min(limitA.position.x, limitB.position.x);
         maxX = Mathf.Max(limitA.position.x, limitB.position.x);
+        isSelect = false;
     }
 
     void Update()
@@ -42,6 +45,7 @@ public class Select2D : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             selectedObject = null;
+            isSelect = false;
         }
     }
 
@@ -54,6 +58,7 @@ public class Select2D : MonoBehaviour
         {
             selectedObject = hit.collider.gameObject; // そのオブジェクトを選択
             objectCenter = selectedObject.transform.position.x; // 選択した瞬間にだけ取得
+            isSelect = true;
         }
     }
 }
