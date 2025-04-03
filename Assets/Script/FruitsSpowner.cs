@@ -25,6 +25,6 @@ public class FruitsSpowner : MonoBehaviour
     void Update()
     {
         //再生成
-        //フルーツがない場合ランダムに生成
+        //フルーツがない場合再度生成
     }
 }

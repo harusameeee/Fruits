@@ -22,7 +22,7 @@ using UnityEngine;
     //ŒÂ•Ê§ŒÀŠÔ(Š„‡)
     public static float customerTimeRatio = 0;
     //Šî‘b“_
-    public static int baseScore = 0;
+    public static int BaseScore = 0;
 
     public static void DataSetting(int difficulty)
     {
@@ -33,7 +33,7 @@ using UnityEngine;
 
             customerTimeRatio = 1.2f;
            
-            baseScore = 100;
+            BaseScore = 100;
             break;
           
         case 1:

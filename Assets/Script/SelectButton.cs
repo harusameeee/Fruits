@@ -11,5 +11,6 @@ public class SelectButton : MonoBehaviour
     {
         SelectedDifficulty = difficulty;
         PlayOnlyData.DataSetting(difficulty);
+        Debug.Log("ê¨å˜");
     }
 }

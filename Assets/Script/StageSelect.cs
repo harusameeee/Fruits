@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StageSelect : MonoBehaviour
 {
-    public float speed = 5f; // 移動速度
+    public float Speed = 5f; // 移動速度
     private Transform[] childObjects; // 子オブジェクトの参照リスト
     private Vector2 m_movement; // 移動したい量
     private Vector3[] targetPositions; // 移動先の座標
@@ -59,7 +59,7 @@ public class StageSelect : MonoBehaviour
         // スムーズに移動
         for (int i = 0; i < childObjects.Length; i++)
         {
-            childObjects[i].localPosition = Vector3.Lerp(childObjects[i].localPosition, targetPositions[i], speed * Time.deltaTime);
+            childObjects[i].localPosition = Vector3.Lerp(childObjects[i].localPosition, targetPositions[i], Speed * Time.deltaTime);
         }
     }
 
