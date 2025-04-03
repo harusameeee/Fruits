@@ -27,24 +27,38 @@ using UnityEngine;
     public static void DataSetting(int difficulty)
     {
         switch (difficulty)
-        { 
-        case 0:
-            FruitKinds = 3;
+        {
+            case 0:
+                FruitKinds = 3;
 
-            customerTimeRatio = 1.2f;
-           
-            BaseScore = 100;
-            break;
-          
-        case 1:
+                customerTimeRatio = 1.2f;
+
+                BaseScore = 100;
                 break;
 
-        case 2:
+            case 1:
+                FruitKinds = 4;
+
+                customerTimeRatio = 1.0f;
+
+                BaseScore = 150;
                 break;
-                
-        case 3:
-                break; 
-                
+
+            case 2:
+                FruitKinds = 5;
+
+                customerTimeRatio = 0.75f;
+
+                BaseScore = 200;
+                break;
+
+            case 3:
+                FruitKinds = 5;
+
+                customerTimeRatio = 1.0f;
+
+                BaseScore = 150;
+                break;
 
         }
 

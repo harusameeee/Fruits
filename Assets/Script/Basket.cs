@@ -18,14 +18,17 @@ public class Basket : MonoBehaviour
         }
     }
 
-    //3つ以上ならお客さんのとこに持っていけるようにする
+    //規定値以上ならお客さんのとこに持っていけるようにする
     //それ以上のらないようにする
     private void Update()
     {
-        if(m_count>=3)
+        //規定値以上なら
+        if (m_count>=3)
         {
-            m_isFinish=true;
-            //画像いい感じにしてもいいかも
+            //渡せるようにする
+
+            //中身をリセット(再設定する)
+            
         }
     }
 

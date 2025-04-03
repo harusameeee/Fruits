@@ -6,7 +6,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
 
-    private int m_score=0;
+    public int m_score=0;
     [SerializeField] TextMeshProUGUI m_scoreText;
 
     // Start is called before the first frame update
@@ -18,8 +18,10 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        m_scoreText.text = "‚Æ‚­‚Ä‚ñF" + m_score.ToString();
     }
 
-    public void SetScore(int score) { m_score += score; }
+    //c‚èŠÔ–Šî‘b“_
+    public void SetScore(float limitTime, int score) { m_score += (score*(int)limitTime); }
 }

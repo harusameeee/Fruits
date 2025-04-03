@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 1697156228}
   - component: {fileID: 1697156227}
   - component: {fileID: 1697156226}
+  - component: {fileID: 1697156229}
   m_Layer: 5
   m_Name: SelectButton
   m_TagString: Untagged
@@ -749,7 +750,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1697156227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1697156229}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ToSelectScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1697156227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +801,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697156224}
   m_CullTransparentMesh: 1
+--- !u!114 &1697156229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697156224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8a9f3fab384064cb293d335e65396c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2112050991
 GameObject:
   m_ObjectHideFlags: 0
