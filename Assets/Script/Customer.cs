@@ -25,7 +25,7 @@ public class Customer : MonoBehaviour
 
         }
         //シーン管理用のスクリプト欲しいかもめも
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && finishMask.gameObject.active==true)
             SceneManager.LoadScene("ResultScene");
 
         // rest.text="残り" + customer.ToString()+"人";
