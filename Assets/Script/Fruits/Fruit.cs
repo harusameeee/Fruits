@@ -5,14 +5,11 @@ using UnityEngine;
 public class Fruit : MonoBehaviour
 {
     private bool m_isActive = false;
-    private Rigidbody2D rb;
     private static float m_time = 3.0f;
     private Select2D select2D = null;
-    [SerializeField] private Vector3 m_fallPosition;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         select2D = FindObjectOfType<Select2D>(); // Select2Dを取得
     }
 
@@ -32,7 +29,7 @@ public class Fruit : MonoBehaviour
                 m_isActive = true;
             }
         }
-        else
+        else if(!select2D.isSelect)
         {
             m_time = 3.0f; // 選択されていないときは時間リセット
         }

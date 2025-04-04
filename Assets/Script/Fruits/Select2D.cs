@@ -58,8 +58,6 @@ public class Select2D : MonoBehaviour
         mousePos.z = 0;
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
-        //Debug.DrawRay(mousePos, Vector3.forward * 10, Color.red, 1f); // デバッグ用のRay表示
-
         if (hit.collider != null && hit.collider.CompareTag("Fluit")) // 何かに当たったら
         {
             selectedObject = hit.collider.gameObject; // そのオブジェクトを選択

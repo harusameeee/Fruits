@@ -10,7 +10,7 @@ public class Basket : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Fluit")&& m_isFinish==false)
+        if (collision.CompareTag("Fruit")&& m_isFinish==false)
         {
             Debug.Log("当たったよ");
             Destroy(collision.gameObject); // Fruitオブジェクトを消す

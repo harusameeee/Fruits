@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FruitsSpowner : MonoBehaviour
+public class FruitsSpawner : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPositions;
     [SerializeField] GameObject[] fruitPrefabs;

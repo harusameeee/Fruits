@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomerSpowner : MonoBehaviour
+public class CustomerSpawner : MonoBehaviour
 {
     // ‚¨‹q‚³‚ñ‚ÌƒvƒŒƒnƒu
     [SerializeField] Customer m_customerPrefab;
