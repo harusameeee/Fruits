@@ -45,8 +45,7 @@ public class Select2D : MonoBehaviour
 
         // マウスを離したら選択解除
         if (Input.GetMouseButtonUp(0))
-        {
-       
+        {      
             selectedObject = null;
             isSelect = false;
             

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
-    public static bool m_isActive = false;
+    private bool m_isActive = false;
     private Rigidbody2D rb;
     private static float m_time = 3.0f;
     private Select2D select2D = null;
@@ -14,7 +14,6 @@ public class Fruit : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         select2D = FindObjectOfType<Select2D>(); // Select2D‚ğæ“¾
-        rb.gravityScale = 0; // Å‰‚Íd—Í‚È‚µ
     }
 
     void Update()
@@ -51,5 +50,4 @@ public class Fruit : MonoBehaviour
         }
     }
 
-    //public void SetisActive(bool active) { m_isActive = active; }
 }

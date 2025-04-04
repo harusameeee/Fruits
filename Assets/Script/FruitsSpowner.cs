@@ -4,27 +4,34 @@ using UnityEngine;
 
 public class FruitsSpowner : MonoBehaviour
 {
-    [SerializeField] Transform[] SpownPositions;
-    [SerializeField] GameObject[] Fruit;
+    [SerializeField] Transform[] spawnPositions;
+    [SerializeField] GameObject[] fruitPrefabs;
+
+    private Dictionary<Transform, GameObject> activeFruits = new Dictionary<Transform, GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < SpownPositions.Length; i++)
+        for (int i = 0; i < spawnPositions.Length; i++)
         {
-            if (Fruit.Length == 0) return; // Fruit が設定されていなかったら終了
+            if (fruitPrefabs.Length == 0) return; // Fruit が設定されていなかったら終了
 
-            // ランダムなフルーツを選択
-            GameObject selectedFruit = Fruit[Random.Range(0, Fruit.Length)];
-            // 2Dのスポーン位置にフルーツを生成
-            Instantiate(selectedFruit, SpownPositions[i].position, Quaternion.identity);
+            // ランダムなフルーツを選択してスポーン
+            GameObject spawnedFruit = SpawnFruitAt(spawnPositions[i]);
+            activeFruits[spawnPositions[i]] = spawnedFruit;
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //再生成
-        //フルーツがない場合再度生成
     }
+
+    // 指定位置にフルーツをスポーン
+    private GameObject SpawnFruitAt(Transform spawnPos)
+    {
+        GameObject selectedFruit = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
+        return Instantiate(selectedFruit, spawnPos.position, Quaternion.identity);
+    }
+
+    
 }
