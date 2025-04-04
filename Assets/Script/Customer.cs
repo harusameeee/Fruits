@@ -9,7 +9,7 @@ public class Customer : MonoBehaviour
     [SerializeField] GameObject finishMask;
     private SceneChange s;
     private Basket basket;
-
+    
     void Start()
     {
         s = FindObjectOfType<SceneChange>(); // SceneChangeのインスタンスを取得
