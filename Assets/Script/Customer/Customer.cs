@@ -6,23 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Customer : MonoBehaviour
 {
-<<<<<<< HEAD:Assets/Script/Customer/Customer.cs
-    [SerializeField] GameObject finishMask;
-=======
+    //[SerializeField] GameObject finishMask;
     // [SerializeField] int customer = 1;
     // 残り人数
     //[SerializeField] TextMeshProUGUI rest;
     // 終了したときに表示するキャンバス
     //[SerializeField] GameObject finishMask;
->>>>>>> komuro:Assets/Script/Customer.cs
     private SceneChange s;
     private Basket basket;
     // ステート
-
-
-    // 追加
-    // カスタマースポナー
-    [SerializeField] CustomerSpowner spowner;
     
     void Start()
     {
@@ -32,21 +24,18 @@ public class Customer : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD:Assets/Script/Customer/Customer.cs
-        //時間切れになったら
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            finishMask.gameObject.SetActive(true);
+        ////時間切れになったら
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    finishMask.gameObject.SetActive(true);
 
-        }
+        //}
         //シーン管理用のスクリプト欲しいかもめも
-        if (Input.GetMouseButtonDown(0) && finishMask.gameObject.active==true)
-            SceneManager.LoadScene("ResultScene");
-=======
+        //if (Input.GetMouseButtonDown(0) && finishMask.gameObject.active==true)
+        //    SceneManager.LoadScene("ResultScene");
         //if (customer <= 0)
         //{
         //    finishMask.gameObject.SetActive(true);
->>>>>>> komuro:Assets/Script/Customer.cs
 
         //    //シーン管理用のスクリプト欲しいかもめも
         //    if(Input.GetKeyDown(KeyCode.Space)) 
@@ -54,29 +43,22 @@ public class Customer : MonoBehaviour
         //}
         // rest.text="残り" + customer.ToString()+"人";
         //rest.text=customer.ToString();
-<<<<<<< HEAD:Assets/Script/Customer/Customer.cs
-=======
 
 
         // 移動したら○秒待機
 
         // 画面外へ移動後、削除
 
->>>>>>> komuro:Assets/Script/Customer.cs
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Basket") && basket != null && basket.GetIsFinish()==true)
         {
-<<<<<<< HEAD:Assets/Script/Customer/Customer.cs
-
-=======
             //customer--;
->>>>>>> komuro:Assets/Script/Customer.cs
             Debug.Log("完了");
-            // 新しくお客さんをスポーンさせる
-            CustomerSpowner.Instance.SpownCustomer();
+			// 新しくお客さんをスポーンさせる
+			CustomerSpawner.Instance.SpawnCustomer();
 		}
     }
 
