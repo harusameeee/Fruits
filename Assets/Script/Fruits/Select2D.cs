@@ -58,7 +58,7 @@ public class Select2D : MonoBehaviour
         mousePos.z = 0;
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
-        if (hit.collider != null && hit.collider.CompareTag("Fluit")) // 何かに当たったら
+        if (hit.collider != null && hit.collider.CompareTag("Fruit")) // 何かに当たったら
         {
             selectedObject = hit.collider.gameObject; // そのオブジェクトを選択
             objectCenter = selectedObject.transform.position.x; // 選択した瞬間にだけ取得
