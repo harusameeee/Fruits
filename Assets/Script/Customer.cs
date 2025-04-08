@@ -6,11 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Customer : MonoBehaviour
 {
-    [SerializeField] int customer = 1;
-    [SerializeField] TextMeshProUGUI rest;
-    [SerializeField] GameObject finishMask;
+    // [SerializeField] int customer = 1;
+    // 残り人数
+    //[SerializeField] TextMeshProUGUI rest;
+    // 終了したときに表示するキャンバス
+    //[SerializeField] GameObject finishMask;
     private SceneChange s;
     private Basket basket;
+    // ステート
+
+
+    // 追加
+    // カスタマースポナー
+    [SerializeField] CustomerSpowner spowner;
     
     void Start()
     {
@@ -20,25 +28,41 @@ public class Customer : MonoBehaviour
 
     void Update()
     {
-        if (customer <= 0)
-        {
-            finishMask.gameObject.SetActive(true);
+        //if (customer <= 0)
+        //{
+        //    finishMask.gameObject.SetActive(true);
 
-            //シーン管理用のスクリプト欲しいかもめも
-            if(Input.GetKeyDown(KeyCode.Space)) 
-            SceneManager.LoadScene("ResultScene");
-        }
-
+        //    //シーン管理用のスクリプト欲しいかもめも
+        //    if(Input.GetKeyDown(KeyCode.Space)) 
+        //    SceneManager.LoadScene("ResultScene");
+        //}
         // rest.text="残り" + customer.ToString()+"人";
-        rest.text=customer.ToString();
+        //rest.text=customer.ToString();
+
+
+        // 移動したら○秒待機
+
+        // 画面外へ移動後、削除
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Basket") && basket != null && basket.GetIsFinish()==true)
         {
-            customer--;
+            //customer--;
             Debug.Log("完了");
-        }
+            // 新しくお客さんをスポーンさせる
+            CustomerSpowner.Instance.SpownCustomer();
+		}
     }
+
+    // スポーンした後の動き
+    private void SpownMovement()
+    {
+
+    }
+
+	// フルーツをもらった後の動き
+
 }
