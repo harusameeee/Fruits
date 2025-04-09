@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class CustomerSpawner : MonoBehaviour
 {
 	// シングルトンにする
-	public static CustomerSpawner Instance { get; private set; }
+	public static CustomerSpowner Instance { get; private set; }
     // お客さんのプレハブ
     [SerializeField] Customer m_customerPrefab;
 
@@ -25,7 +25,7 @@ public class CustomerSpawner : MonoBehaviour
 	}
 
 	// スポーンさせる
-	public void SpawnCustomer()
+	public void SpownCustomer()
     {
         // お客さんをスポーンさせる
 		Instantiate(m_customerPrefab, this.transform.position, Quaternion.identity);
