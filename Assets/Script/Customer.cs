@@ -15,10 +15,6 @@ public class Customer : MonoBehaviour
     private Basket basket;
     // ステート
 
-
-    // 追加
-    // カスタマースポナー
-    [SerializeField] CustomerSpowner spowner;
     
     void Start()
     {

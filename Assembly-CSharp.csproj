@@ -66,13 +66,13 @@
     <Compile Include="Assets\Script\CustomerSpowner.cs" />
     <Compile Include="Assets\Script\SelectButton.cs" />
     <Compile Include="Assets\Script\Select2D.cs" />
+    <Compile Include="Assets\Komuro\ICustomerState.cs" />
     <Compile Include="Assets\Script\FruitsSpowner.cs" />
     <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
     <Compile Include="Assets\Script\Basket.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\PlayOnlyData.cs" />
-    <Compile Include="Assets\Komuro\ICustomerState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
