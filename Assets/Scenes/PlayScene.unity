@@ -789,6 +789,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+=======
+--- !u!114 &865572618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865572617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9753fb478f2ad47b1fe056c66ee8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_customerPrefab: {fileID: 4109201397361790391, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+>>>>>>> komuro
 --- !u!4 &865572619
 Transform:
   m_ObjectHideFlags: 0
@@ -1574,6 +1590,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1931398849 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4177246097597241496, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
@@ -1585,6 +1602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8569eca026fb542a36062bbf163f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> komuro
 --- !u!1 &1948273329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,13 +1902,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051f2b1e503f1d84ea55cbdbf8412ee5, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &4177246098923279961
+=======
+--- !u!1001 &4109201397144552310
+>>>>>>> komuro
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 4177246097597241497, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
       propertyPath: m_Name
       value: Customer
@@ -1938,6 +1962,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790387, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109201397361790390, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
+      propertyPath: m_Name
+      value: Customer
+      objectReference: {fileID: 0}
+>>>>>>> komuro
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f8f29d7fdf2d224e86c163210503bfb, type: 3}
 --- !u!1001 &6463200845949632486
