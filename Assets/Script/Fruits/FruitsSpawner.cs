@@ -33,7 +33,7 @@ public class FruitsSpawner : MonoBehaviour
                 {
                     isRespawning = true;
                     _ = RespawnFruitAsync(pair.Key); // 非同期タスクを実行（戻り値は使わないので `_ =`）
-                    break; // 一度に一個だけ処理
+                    //break; // 一度に一個だけ処理
                 }
             }
         }
