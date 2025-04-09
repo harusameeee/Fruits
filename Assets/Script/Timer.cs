@@ -1,46 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Cysharp.Threading.Tasks;
 
 public class Timer : MonoBehaviour
 {
-    // タイムリミット
     private float m_timeLimit;
-    // 表示するテキストボックス
-    [SerializeField] TextMeshProUGUI m_timerText;
+    private float m_countDown = 3.4f;
 
-    // 終了したときに表示するキャンバス
+    [SerializeField] TextMeshProUGUI m_timerText;
+    [SerializeField] TextMeshProUGUI m_countDownText;
     [SerializeField] GameObject finishMask;
 
-    // Start is called before the first frame update
-    void Start()
+    private async void Start()
     {
-        // 定数を入れる
         m_timeLimit = PlayOnlyData.TimeLimit;
+
+        // カウントダウンを表示
+        await CountdownStart();
+
+        // タイマー開始
+        await StartTimer();
+
+        // タイマー終了後の入力待ち
+        await WaitForSpaceKey();
+
+        // シーン遷移
+        SceneManager.LoadScene("ResultScene");
     }
 
-    // Update is called once per frame
-    void Update()
+    private async UniTask CountdownStart()
     {
-        // 時間経過
-        m_timeLimit -= Time.deltaTime;
-        // 残り時間を表示
-        m_timerText.text = "あと"+m_timeLimit.ToString("f0");
-
-        if(m_timeLimit<=0)
+        while (m_countDown > 0)
         {
-            finishMask.SetActive(true);
-
-            //時間をこれ以上マイナスしないように
-            m_timeLimit = 0;
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                //シーン移動
-                //SceneManager.LoadScene("ResultScene");
-            }
-
+            m_countDownText.text = m_countDown.ToString("f0");
+            m_countDown -= Time.deltaTime;
+            await UniTask.Yield();
         }
+
+        m_countDownText.text = "";
+    }
+
+    private async UniTask StartTimer()
+    {
+        while (m_timeLimit > 0)
+        {
+            m_timeLimit -= Time.deltaTime;
+            m_timerText.text = "あと" + m_timeLimit.ToString("f0");
+            await UniTask.Yield();
+        }
+
+        m_timeLimit = 0;
+        m_timerText.text = "あと0";
+        finishMask.SetActive(true);
+    }
+
+    private async UniTask WaitForSpaceKey()
+    {
+        await UniTask.WaitUntil(() => Input.GetMouseButtonDown(0));
     }
 }
