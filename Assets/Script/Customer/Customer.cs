@@ -63,7 +63,7 @@ public class Customer : MonoBehaviour
     }
 
     // ƒXƒ|[ƒ“‚µ‚½Œã‚Ì“®‚«
-    private void SpownMovement()
+    private void SpawnMovement()
     {
 
     }

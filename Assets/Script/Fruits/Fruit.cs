@@ -52,7 +52,7 @@ public class Fruit : MonoBehaviour
         }
 
         // 選択が解除されたか、タイマー切れたら処理実行
-        if (select2D?.selectedObject != gameObject)
+        if (select2D?.selectedObject != gameObject||timer<=0f)
         {
             select2D.isSelect = false;
             select2D.selectedObject = null;
