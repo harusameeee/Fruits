@@ -19,7 +19,7 @@ public class Score : MonoBehaviour
     void Update()
     {
 
-        m_scoreText.text = "‚Æ‚­‚Ä‚ñF" + m_score.ToString();
+        m_scoreText.text = "‚Æ‚­‚Ä‚ñ\n" + m_score.ToString();
     }
 
     //c‚èŠÔ–Šî‘b“_
