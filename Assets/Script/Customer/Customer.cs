@@ -15,10 +15,6 @@ public class Customer : MonoBehaviour
     private SceneChange s;
     private Basket basket;
     // ステート
-<<<<<<< HEAD:Assets/Script/Customer/Customer.cs
-=======
-
->>>>>>> komuro:Assets/Script/Customer.cs
     
     void Start()
     {
